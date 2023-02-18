@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const { query } = require('express');
-const uri = process.env.DB_URL;
+const uri = `mongodb+srv://${process.env.NAME}:${process.env.PASS}@cluster0.d1gdkts.mongodb.net/?retryWrites=true&w=majority`
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
